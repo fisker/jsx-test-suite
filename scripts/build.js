@@ -27,7 +27,7 @@ async function getFixtures() {
     assert.ok(!seen.has(id))
     seen.set(id, input)
 
-    const name = `${String(tests.length).padStart(4, '0')}-${id}.jsx`
+    const name = `${String(tests.length + 1).padStart(4, '0')}-${id}.jsx`
     tests.push({input, id, name, ...properties})
   }
 
